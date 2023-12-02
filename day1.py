@@ -21,9 +21,14 @@ for i in range(filelength):
         #print(string[j])
         if string[j].isdigit():
             numpair[numpairindex] += str(string[j])
+        ## for part 2 ##
+        for index, val in enumerate(['one', 'two', 'three', 'four', 'five','six', 'seven', 'eight', 'nine']):
+            if string[j:].startswith(val):
+                numpair[numpairindex] += str(index + 1)
+        ## end part 2 ##
     numpairindex += 1
     
-#print(numpair)
+print(numpair)
 
 finalnums = [0] * filelength
 index = 0
@@ -39,5 +44,5 @@ total = sum(finalnums)
 
 print(total)
 
-## pt 2 ##
+
 
